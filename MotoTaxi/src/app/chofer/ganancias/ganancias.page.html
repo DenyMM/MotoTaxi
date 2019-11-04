@@ -1,0 +1,100 @@
+
+<ion-toolbar class="background">
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" icon="add"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>Mis Ganancias</ion-title>
+  </ion-toolbar>
+
+
+<ion-content class="background">
+  <ion-card class="white-card">
+    <br>
+   <ion-card-subtitle text-center>Hoy</ion-card-subtitle>
+   <h2 class="font-big" text-center>$249.21</h2>
+   <ion-row>
+     <ion-col size="6">
+        <h4 class="font-win" text-center><ion-icon class="icon-big" name="train"></ion-icon>12 viajes</h4>
+     </ion-col>
+     <ion-col size="6">
+       <h4 class="font-win" text-center><ion-icon class="icon-big" name="time"></ion-icon>5h 23m</h4>
+     </ion-col>
+   </ion-row>
+  </ion-card>
+  <ion-card class="white-card">
+      <ion-segment (ionChange)="ganancia()" [(ngModel)]="segment" >
+        
+          <ion-segment-button value="0">
+              <ion-icon name="calendar"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+              <ion-icon name="card"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="2">
+              <ion-icon name="cash"></ion-icon>
+            </ion-segment-button>
+        </ion-segment>
+
+        <ion-slides #slides (ionSlideDidChange)="contenido()" scrollbar="true">
+            <ion-slide>
+              <div class="ion-padding">
+                    <ion-card-header>
+                        Ganancias por mes
+                    </ion-card-header>
+                    <ion-card-content>
+                      <canvas #barCanvas></canvas>
+                    </ion-card-content>
+                  </div>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-row>
+                <ion-col size="12">
+                    <ion-card-subtitle>Pago con tarjeta</ion-card-subtitle>
+                    <h3>Ganancias Totales</h3>
+                    <h1 class="font-big">$1,124.42</h1>
+                    <h4 class="font-win" text-center><ion-icon class="icon-big" name="train"></ion-icon>88 viajes</h4>
+                    <h4>Cuenta: ************234</h4>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-row>
+                <ion-col size="12">
+                    <ion-card-subtitle>Pago con efectivo</ion-card-subtitle>
+                    <h3>Ganancias Totales</h3>
+                    <h1 class="font-big">$2,567.48</h1>
+                    <h4 class="font-win" text-center><ion-icon class="icon-big" name="train"></ion-icon>264 viajes</h4>
+                </ion-col>
+              </ion-row>
+              </ion-slide>
+          </ion-slides>
+  </ion-card>
+  <ion-card class="white-card" text-center>
+      <ion-card-subtitle text-center>Ultimo viaje pagado en efectivo</ion-card-subtitle>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../../assets/avatars/av_07.png">
+          </ion-avatar>
+          <h4>Diana Sanchéz</h4><br>
+          <h4 slot="end"><ion-icon name="star"></ion-icon>4.5</h4>
+      </ion-item>
+            <h4>Casa del Corregidor -  Zócalo</h4>
+            <h4> $30</h4>
+            <h4>Tráfico Pesado</h4>
+  </ion-card>
+  <ion-card class="white-card" text-center>
+      <ion-card-subtitle text-center>Ultimo viaje pagado con tarjeta</ion-card-subtitle>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../../assets/avatars/av_08.png">
+          </ion-avatar>
+          <h4>Jose Lopéz</h4><br>
+          <h4 slot="end"><ion-icon name="star"></ion-icon>5</h4>
+      </ion-item>
+            <h4> Zócalo - Templo Mayor</h4>
+            <h4> $50</h4>
+            <h4>Tráfico Pesado</h4>
+  </ion-card>
+</ion-content>

@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>pago</ion-title>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      <ion-back-button text="" icon="undo"></ion-back-button>
+      </ion-buttons>
+    <ion-title text-center>Elegir forma de pago</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +21,7 @@
         
           <ion-slides #slides (ionSlideDidChange)="contenidoPago()" scrollbar="true">
             <ion-slide>
-              First
+              Efectivo
             </ion-slide>
 
             <ion-slide>

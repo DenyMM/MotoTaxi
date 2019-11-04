@@ -39,6 +39,11 @@ const routes: Routes = [
             path: 'registro',
             loadChildren: () =>
           import('../pages/registro/registro.module').then(m => m.RegistroPageModule)
+          },
+          {
+            path: 'registroc',
+            loadChildren: () =>
+          import('../chofer/registroc/registroc.module').then(m => m.RegistrocPageModule)
           }
         ]
       },
@@ -54,6 +59,11 @@ const routes: Routes = [
             path: 'pago',
             loadChildren: () =>
           import('../pages/pago/pago.module').then(m => m.PagoPageModule)
+          },
+          {
+            path: 'ganancias',
+            loadChildren: () =>
+          import('../chofer/ganancias/ganancias.module').then(m => m.GananciasPageModule)
           }
         ]
       },
