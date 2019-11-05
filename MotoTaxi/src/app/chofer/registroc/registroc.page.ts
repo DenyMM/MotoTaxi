@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registroc',
   templateUrl: './registroc.page.html',
   styleUrls: ['./registroc.page.scss'],
 })
-export class RegistrocPage implements OnInit {
+export class RegistrocPage {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
-  ngOnInit() {
+  async irPagina(pagina: any) {
+    this.navCtrl.navigateForward('/tabs/tab2/' + pagina);
   }
 
 }

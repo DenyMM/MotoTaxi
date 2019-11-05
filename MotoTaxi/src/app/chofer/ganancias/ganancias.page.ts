@@ -9,7 +9,7 @@ import { Chart } from 'chart.js';
 })
 export class GananciasPage implements OnInit {
 
-  @ViewChild('barCanvas') barCanvas: ElementRef;
+  @ViewChild('barCanvas', { static: true }) barCanvas: ElementRef;
 
   private barChart: Chart;
 
