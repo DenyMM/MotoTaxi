@@ -20,6 +20,7 @@
     border: 1px solid #ffffff00;
     width: 100%;
     background-image: linear-gradient(-90deg,  #007f63, #006e7f);
+    color: #d4cccc;
     }
   
     h3.button-font{
@@ -27,10 +28,21 @@
       color: #000000;
       font-weight: 400;
     }
+
+    h3.button-font-white{
+      font-size: 25px;
+      color: #ffffff;
+      font-weight: 400;
+    }
   
     .icon-log {
         font-size: 50px;
         color: #000000;
+    }
+
+    .icon-log-white {
+      font-size: 50px;
+      color: #ffffff;
     }
   
     h1{

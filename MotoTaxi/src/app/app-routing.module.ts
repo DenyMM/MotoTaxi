@@ -6,7 +6,8 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  /*{ path: 'opcion', loadChildren: './pages/opcion/opcion.module#OpcionPageModule' },
+  /*{ path: 'loginc', loadChildren: './chofer/loginc/loginc.module#LogincPageModule' },
+  { path: 'opcion', loadChildren: './pages/opcion/opcion.module#OpcionPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'registro', loadChildren: './pages/registro/registro.module#RegistroPageModule' },
   { path: 'pago', loadChildren: './pages/pago/pago.module#PagoPageModule' }*/

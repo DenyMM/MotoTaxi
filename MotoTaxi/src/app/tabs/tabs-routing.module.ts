@@ -36,6 +36,11 @@ const routes: Routes = [
           import('../pages/login/login.module').then(m => m.LoginPageModule)
           },
           {
+            path: 'loginc',
+            loadChildren: () =>
+          import('../chofer/loginc/loginc.module').then(m => m.LogincPageModule)
+          },
+          {
             path: 'registro',
             loadChildren: () =>
           import('../pages/registro/registro.module').then(m => m.RegistroPageModule)

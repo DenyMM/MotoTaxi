@@ -4,9 +4,7 @@
       <ion-back-button text="volver" icon="add"></ion-back-button>
     </ion-buttons>
     <ion-title text-center>Mis Ganancias</ion-title>
-  </ion-toolbar>
-
-
+</ion-toolbar>
 <ion-content class="background">
   <ion-card class="white-card">
     <br>
@@ -23,8 +21,7 @@
   </ion-card>
   <ion-card class="white-card">
       <ion-segment (ionChange)="ganancia()" [(ngModel)]="segment" >
-        
-          <ion-segment-button value="0">
+            <ion-segment-button value="0">
               <ion-icon name="calendar"></ion-icon>
             </ion-segment-button>
             <ion-segment-button value="1">
@@ -33,8 +30,7 @@
             <ion-segment-button value="2">
               <ion-icon name="cash"></ion-icon>
             </ion-segment-button>
-        </ion-segment>
-
+      </ion-segment>
         <ion-slides #slides (ionSlideDidChange)="contenido()" scrollbar="true">
             <ion-slide>
               <div class="ion-padding">
@@ -44,9 +40,8 @@
                     <ion-card-content>
                       <canvas #barCanvas></canvas>
                     </ion-card-content>
-                  </div>
+              </div>
             </ion-slide>
-
             <ion-slide>
               <ion-row>
                 <ion-col size="12">
@@ -58,9 +53,8 @@
                 </ion-col>
               </ion-row>
             </ion-slide>
-
             <ion-slide>
-                <ion-row>
+              <ion-row>
                 <ion-col size="12">
                     <ion-card-subtitle>Pago con efectivo</ion-card-subtitle>
                     <h3>Ganancias Totales</h3>
@@ -68,7 +62,7 @@
                     <h4 class="font-win" text-center><ion-icon class="icon-big" name="train"></ion-icon>264 viajes</h4>
                 </ion-col>
               </ion-row>
-              </ion-slide>
+            </ion-slide>
           </ion-slides>
   </ion-card>
   <ion-card class="white-card" text-center>
